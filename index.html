@@ -1,27 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <title>Calculator</title>
     <script>
         // SHARED GLOBAL VARIABLE WITH NO VALUE *YET*!
         let answer;  // = window.answerField
         let number1; // = window.number1Field
         let number2; // = window.number2Field
 
-        function onAddBtnClicked(){
+        function onAddBtnClicked() {
             answer.value = Number(number1.value) + Number(number2.value)
         }
 
-        function onSubtractBtnClicked(){
+        function onSubtractBtnClicked() {
             answer.value = Number(number1.value) - Number(number2.value)
         }
 
-        function onMultiplyBtnClicked(){
+        function onMultiplyBtnClicked() {
             answer.value = Number(number1.value) * Number(number2.value)
         }
 
-        function onDivideBtnClicked(){
+        function onDivideBtnClicked() {
             answer.value = Number(number1.value) / Number(number2.value)
         }
 
-        function init(){
+        function init() {
             //NOW THAT THE PAGE IS LOADED WE CAN PUT VALUES IN THE GLOBALS FROM THE PAGE/WINDOW/DOCUMENT
             answer = window.answerField;
             number1 = window.number1Field;
@@ -29,7 +32,7 @@
 
             //SET FOCUS
             number1.focus();
-            
+
             //ALTERNATIVE TO ADDING THE ONCLICK ATTRIBUTE IN THE HTML BELOW
             document.getElementById("multiply").addEventListener("click", onMultiplyBtnClicked);
             document.getElementById("divide").addEventListener("click", onDivideBtnClicked);
@@ -39,6 +42,7 @@
         // document.addEventListener("DOMContentLoaded", init);
     </script>
 </head>
+
 <body style="font-family: sans-serif; background-color:antiquewhite;">
     Number 1: <input id="number1Field" type="number"><br><br>
     Number 2: <input id="number2Field" type="number">
@@ -50,3 +54,5 @@
     </p>
     Answer: <input id="answerField" readonly>
 </body>
+
+</html>
