@@ -27,6 +27,9 @@
             number1 = window.number1Field;
             number2 = window.number2Field;
 
+            //SET FOCUS
+            number1.focus();
+            
             //ALTERNATIVE TO ADDING THE ONCLICK ATTRIBUTE IN THE HTML BELOW
             document.getElementById("multiply").addEventListener("click", onMultiplyBtnClicked);
             document.getElementById("divide").addEventListener("click", onDivideBtnClicked);
@@ -36,9 +39,9 @@
         // document.addEventListener("DOMContentLoaded", init);
     </script>
 </head>
-<body>
-    Number 1: <input id="number1Field"><br><br>
-    Number 2: <input id="number2Field">
+<body style="font-family: sans-serif; background-color:antiquewhite;">
+    Number 1: <input id="number1Field" type="number"><br><br>
+    Number 2: <input id="number2Field" type="number">
     <p>
         <button id="add" onclick="onAddBtnClicked()">Add</button>
         <button id="subtract" onclick="onSubtractBtnClicked()">Subtract</button>
